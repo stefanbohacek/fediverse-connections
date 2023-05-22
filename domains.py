@@ -5,7 +5,7 @@ import re
 import pandas as pd
 import matplotlib.pyplot as plt
 
-filename = "domains-test.csv"
+filename = "domains.csv"
 
 datareader = csv.reader(open(filename))
 domains_count= len(list(datareader))
