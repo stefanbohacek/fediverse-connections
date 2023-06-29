@@ -13,7 +13,7 @@ You can [follow along with my article](https://stefanbohacek.com/blog/exploring-
 3. Install dependencies.
 
 ```sh
-pip install pandas matplotlib
+pip install pandas matplotlib tldextract
 ```
 
 4. Run the `connections.py` script to generate a `platforms.csv` dataset with a breakdown of fediverse platforms by popularity of your connections' servers.
