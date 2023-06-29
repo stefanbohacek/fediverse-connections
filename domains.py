@@ -33,8 +33,14 @@ with open(filename, "r") as csvfile:
             domain_info[domain] = creation_date
             print(creation_date)
 
-        except AttributeError as e:
+        except (AttributeError, UnicodeDecodeError) as e:
             print("creation date not available")
+
+        if (step % 5 == 0):
+            print('saving data...')
+            df = pd.DataFrame(domain_info.items(), columns=["domain", "creation_date"])
+            df.to_csv("domain-info.csv", encoding="utf-8", index=False)
+
 
 print(json.dumps(domain_info, indent=2))
 
