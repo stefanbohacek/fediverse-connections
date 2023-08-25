@@ -3,7 +3,7 @@ import csv
 import json
 import pandas as pd
 
-filename = "connections-sample.csv"
+filename = "connections.csv"
 platforms = {}
 
 datareader = csv.reader(open(filename))
